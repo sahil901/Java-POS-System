@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="620.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.BetweenController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="620.0" style="-fx-padding: 10px;">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="74.0" text="Home">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.5" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            
+          
+          
+         </children>
+      </HBox>
+      
+      
+        <Label layoutX="154.0" layoutY="46.0" prefHeight="55.0" prefWidth="302.0" text="Please Select One of the Options Below" textFill="#3604fd">
+         <font>
+            <Font name="Lucida Sans Demibold Italic" size="15.0" />
+         </font>
+      </Label>
+      
+      
+      
+      <Button fx:id="b_preTrac" layoutX="194.0" layoutY="267.0" mnemonicParsing="false" onAction="#PreTransactions" prefHeight="142.0" prefWidth="203.0" style="-fx-background-color: #4D8591; -fx-background-radius: 10%;" text="View Previous Transactions" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      
+         <Button fx:id="b_return" layoutX="78.0" layoutY="112.0" mnemonicParsing="false" onAction="#Return" prefHeight="142.0" prefWidth="203.0" style="-fx-background-color: #4D8591; -fx-background-radius: 10%;" text="Return Item" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="b_preReturn" layoutX="311.0" layoutY="112.0" mnemonicParsing="false" onAction="#PreviousReturn" prefHeight="142.0" prefWidth="203.0" style="-fx-background-color: #4D8591; -fx-background-radius: 10%;" text="View Previous Returns" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      
+            
+        
+       
+      
+   </children>
+</AnchorPane>

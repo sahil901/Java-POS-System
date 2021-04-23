@@ -1,0 +1,35 @@
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:./project</property>
+        <property name="connection.username">admin</property>
+        <property name="connection.password"/>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">100</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Update the database instead of dropping and recreating schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="project.entity.Employee"/>
+        <mapping class="project.entity.Product"/>
+        <mapping class="project.entity.Transaction"/>
+        <mapping class="project.entity.TransactionItem"/>
+        <mapping class="project.entity.Refund"/>
+
+    </session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.PreTransactionsController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="620.0" style="-fx-padding: 10px;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="74.0" text="Home">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="12.0" layoutY="54.0" prefHeight="26.0" prefWidth="83.0" text="Transaction ID" />
+      <TextField layoutX="105.0" layoutY="54.0" prefHeight="26.0" prefWidth="108.0" />
+      <Label layoutX="228.0" layoutY="54.0" prefHeight="26.0" prefWidth="116.0" text="Transaction Date" />
+      <DatePicker layoutX="351.0" layoutY="54.0" prefHeight="26.0" prefWidth="162.0" />
+      <TableView fx:id="table_view" layoutX="15.0" layoutY="101.0" prefHeight="451.0" prefWidth="820.0">
+         <columns>
+            <TableColumn fx:id="col_Transaction" prefWidth="123.20001220703125" text="Transaction ID" />
+            <TableColumn fx:id="col_product_id" prefWidth="86.39996337890625" text="Product ID" />
+            <TableColumn fx:id="col_product_name" prefWidth="153.5999755859375" text="Product Name" />
+            <TableColumn fx:id="col_price" prefWidth="91.99993896484375" text="Price" />
+            <TableColumn fx:id="col_quantity" prefWidth="102.4000244140625" text="Quantity" />
+            <TableColumn fx:id="col_tax" prefWidth="87.20001220703125" text="Tax" />
+            <TableColumn fx:id="col_total" prefWidth="73.5999755859375" text="Total" />
+            <TableColumn fx:id="col_sub_total" prefWidth="98.4000244140625" text="Sub Total" />
+         </columns>
+      </TableView>
+      <Button layoutX="536.0" layoutY="54.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Search">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

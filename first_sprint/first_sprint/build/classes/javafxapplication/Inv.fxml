@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.InvController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="620.0" style="-fx-padding: 10px;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Home" prefHeight="34.0" prefWidth="74.0" text="Home">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.5" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="197.0" text="Remove Selected Item">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.5" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" text="Add Selected Item">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.5" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="163.0" text="Update Selected Item">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.5" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="12.0" layoutY="54.0" prefHeight="26.0" prefWidth="74.0" text="Search">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="79.0" layoutY="54.0" prefHeight="26.0" prefWidth="290.0" />
+      <TableView fx:id="table_view" layoutX="24.0" layoutY="101.0" prefHeight="451.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="col_product_id" prefWidth="93.60003471374512" text="Product ID" />
+          <TableColumn fx:id="col_product_name" prefWidth="136.00006866455078" text="Product Name" />
+            <TableColumn fx:id="col_price" prefWidth="114.39996337890625" text="Price" />
+            <TableColumn fx:id="col_quantity" prefWidth="91.20001220703125" text="Quantity" />
+            <TableColumn fx:id="col_expiray_data" minWidth="0.0" prefWidth="143.19992065429688" text="Expiray Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

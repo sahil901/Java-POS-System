@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="270.0" prefWidth="416.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.product.AddProductController">
+    <stylesheets>
+        <URL value="@addproduct.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="24.0" layoutY="57.0" prefHeight="221.0" prefWidth="292.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="114.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="287.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Product Name" />
+            <Label text="Price" GridPane.rowIndex="1" />
+            <Label text="Stock Quantity" GridPane.rowIndex="2" />
+            <Label text="First Stock Date" GridPane.rowIndex="3" />
+            <Label text="Last Modify Date" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dpFirstStocked" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dpLastStocked" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtProductName" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtProductPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtProductStock" prefHeight="25.0" prefWidth="135.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="save" layoutX="183.0" layoutY="231.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="25.0" prefWidth="56.0" text="Save" />
+   </children>
+</AnchorPane>
